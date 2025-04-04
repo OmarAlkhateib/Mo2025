@@ -15,9 +15,8 @@ async def start(update: Update, context: CallbackContext):
 async def show_balance(update: Update, context: CallbackContext):
     await update.message.reply_text("رصيدك الحالي: 100.00$")
 
-TOKEN = "AAGSvR8NVeahQX3yTFpLA3lVYRqQO5lvO2M"
+TOKEN = "AAGvR0jqfGXLYPQp__qnmTnJGCrdSEnNroA"
 app = ApplicationBuilder().token(TOKEN).build()
-
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.Regex("^💰 رصيد$"), show_balance))
 
